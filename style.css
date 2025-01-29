@@ -11,7 +11,7 @@
       transform: translateY(-100vh);
       opacity: 0;
     }
-  }
+}
   
 .hearts-container {
     position: fixed;
@@ -59,25 +59,42 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 300px; /* Ensures space is reserved */
-    max-height: 300px;
+    min-height: 250px; /* Ensures space is reserved */
+    max-height: 250px;
     overflow: hidden;
     margin-top: 20px;
 }
 
 /* Ensure images remain small */
 #year-image {
-    width: 250px; /* Fixed size */
+    width: 250px;
     height: 250px;
-    object-fit: cover; /* Prevents stretching */
+    object-fit: cover;
     border-radius: 15px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-    display: none; /* Hidden by default */
-    transition: opacity 0.5s ease-in-out, transform 0.3s ease-in-out;
+    display: none;
+    transition: opacity 0.3s ease-in-out, transform 0.2s ease-in-out;
     transform: scale(0.95);
 }
 
 #year-image.show {
     opacity: 1;
     transform: scale(1);
+}
+
+/* Fix for buttons */
+button {
+    font-size: 1.3rem;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 10px;
+    background-color: #ff5e57;
+    color: white;
+}
+
+button:hover {
+    background-color: #ff3b3b;
 }

@@ -36,18 +36,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
             if (images[year]) {
                 yearImage.src = images[year];
+                yearImage.style.display = "block";
                 yearImage.classList.add("show");
-                yearText.classList.remove("show");
+                yearText.style.display = "none";
             } else {
-                yearImage.classList.remove("show");
+                yearImage.style.display = "none";
                 yearText.textContent = "Let's add this memory on February 14th, 2025. 💖";
-                yearText.classList.add("show");
+                yearText.style.display = "block";
             }
         });
 
         button.addEventListener("mouseout", () => {
-            yearImage.classList.remove("show");
-            yearText.classList.remove("show");
+            yearImage.style.display = "none";
+            yearText.style.display = "none";
         });
     });
 });
