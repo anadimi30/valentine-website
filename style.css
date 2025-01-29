@@ -1,18 +1,10 @@
 /* ❤️ Floating Hearts Animation */
 @keyframes float-hearts {
-    0% {
-      transform: translateY(0);
-      opacity: 0;
-    }
-    50% {
-      opacity: 1;
-    }
-    100% {
-      transform: translateY(-100vh);
-      opacity: 0;
-    }
+    0% { transform: translateY(0); opacity: 0; }
+    50% { opacity: 1; }
+    100% { transform: translateY(-100vh); opacity: 0; }
 }
-  
+
 .hearts-container {
     position: fixed;
     width: 100%;
@@ -20,17 +12,17 @@
     overflow: hidden;
     z-index: -1;
 }
-  
+
 .heart {
     position: absolute;
     bottom: -10px;
     width: 20px;
     height: 20px;
     background-color: rgba(255, 0, 102, 0.6);
-    clip-path: path("M10 0 L20 10 Q10 30 0 10 L10 0 Z");
+    clip-path: circle(50%);
     animation: float-hearts linear infinite;
 }
-  
+
 .heart:nth-child(1) { left: 5%; animation-duration: 8s; animation-delay: 1s; }
 .heart:nth-child(2) { left: 15%; animation-duration: 10s; animation-delay: 2s; }
 .heart:nth-child(3) { left: 30%; animation-duration: 7s; animation-delay: 3s; }
@@ -53,48 +45,132 @@ body {
     color: white;
 }
 
-/* Fix shifting issue */
-.image-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 250px; /* Ensures space is reserved */
-    max-height: 250px;
-    overflow: hidden;
-    margin-top: 20px;
+/* Container */
+.container {
+    padding: 30px;
+    transition: margin-top 0.4s ease-in-out;
 }
 
-/* Ensure images remain small */
-#year-image {
-    width: 250px;
-    height: 250px;
-    object-fit: cover;
-    border-radius: 15px;
+/* 📝 Improve Spacing */
+h1 {
+    font-size: 3rem;
+    margin-bottom: 25px;
+}
+
+/* Timeline Title */
+.timeline-title {
+    font-size: 1.8rem;
+    margin-top: 50px;
+    font-weight: bold;
+}
+
+/* Year Buttons */
+.timeline {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 30px;
+    max-width: 600px;
+}
+
+/* Year Button Styling */
+.year-btn {
+    padding: 15px 25px;
+    background: #ff5e57;
+    color: white;
+    font-size: 1.3rem;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    border: none;
+}
+
+.year-btn:hover {
+    background: #ff3b3b;
+}
+
+.future {
+    background: #4b6584 !important;
+}
+
+/* 💖 Fix Hover Image Size */
+.hover-image {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
     display: none;
-    transition: opacity 0.3s ease-in-out, transform 0.2s ease-in-out;
-    transform: scale(0.95);
 }
 
-#year-image.show {
-    opacity: 1;
-    transform: scale(1);
-}
-
-/* Fix for buttons */
-button {
-    font-size: 1.3rem;
-    padding: 12px 18px;
+/* 📝 Yes/No Buttons */
+.response-btn {
+    font-size: 1.5rem;
+    padding: 15px 30px;
     border: none;
     border-radius: 10px;
     cursor: pointer;
     transition: all 0.3s ease;
     margin: 10px;
-    background-color: #ff5e57;
+}
+
+#yes-btn {
+    background: #ff5e57;
     color: white;
 }
 
-button:hover {
-    background-color: #ff3b3b;
+#yes-btn:hover {
+    background: #ff3b3b;
+}
+
+#no-btn {
+    background: #4b6584;
+    color: white;
+}
+
+#no-btn:hover {
+    background: #3b3b98;
+}
+
+/* 💬 Response Container (Now Perfectly Centered) */
+#response-container {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    width: 400px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    display: none;
+    position: relative;
+    margin-top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all 0.4s ease-in-out;
+    color: black;
+}
+
+/* 🎥 GIF Styling */
+#response-gif {
+    width: 180px;
+    height: 180px;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+
+#response-text {
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;  /* Moves text down */
+    margin-top: 60px;  /* Moves text even further down */
+}
+
+
+/* 📌 Shift Content Down */
+.shift-down {
+    margin-top: 180px;
+    transition: margin-top 0.4s ease-in-out;
 }

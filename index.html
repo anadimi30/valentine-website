@@ -13,19 +13,22 @@
     <div class="heart"></div>
     <div class="heart"></div>
     <div class="heart"></div>
-    <div class="heart"></div>
-    <div class="heart"></div>
-    <div class="heart"></div>
-    <div class="heart"></div>
   </div>
 
-  <div class="container">
+  <div class="container" id="content-wrapper"> <!-- Wrapped for shifting effect -->
     <h1>Will You Be My Valentine?</h1>
-    <button id="yes-btn">Yes 💕</button>
-    <button id="no-btn">No 😢</button>
-    <div id="response" class="hidden"></div>
 
-    <!-- Timeline Section -->
+    <div class="button-container">
+      <button id="yes-btn" class="response-btn">Yes 💕</button>
+      <button id="no-btn" class="response-btn">No 😢</button>
+    </div>
+
+    <!-- Response Box -->
+    <div id="response-container">
+      <p id="response-text"></p>
+      <img id="response-gif" src="" alt="Response GIF">
+    </div>
+
     <h2 class="timeline-title">It's been 7 years since we've been together... ❤️</h2>
     
     <div class="timeline">
@@ -38,13 +41,6 @@
       <span class="year-btn" data-year="2024">2024</span>
       <span class="year-btn future" data-year="2025">2025</span>
     </div>
-
-    <!-- Image Display -->
-    <div class="image-container">
-      <img id="year-image" src="" alt="Memory Image">
-      <p id="year-text"></p>
-    </div>
-
   </div>
 
   <script src="script.js"></script>
