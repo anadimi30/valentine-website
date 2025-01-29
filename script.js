@@ -1,4 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
+    console.log("JavaScript is working!"); // Debugging line
+
     // Fix Yes/No button functionality
     document.getElementById('yes-btn').addEventListener('click', () => {
         const response = document.getElementById('response');
