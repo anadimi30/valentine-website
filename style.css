@@ -1,62 +1,52 @@
-.timeline {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center; /* Centers the images */
-    align-items: center;
-    gap: 20px; /* Adds spacing between images */
-    padding: 20px;
-  }
-  
-  .year {
-    width: 150px; /* Keeps each year in a fixed box */
+.timeline-title {
     text-align: center;
-    padding: 10px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
-  
-  .year p {
-    font-size: 1rem;
-    font-weight: bold;
+    font-size: 1.5rem;
+    margin-top: 30px;
     color: white;
   }
   
-  .year img {
-    width: 100%;  /* Makes images fit inside the box */
-    height: auto;
-    max-width: 150px;
-    max-height: 150px;
-    border-radius: 10px;
-    object-fit: cover;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  .timeline {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
   }
   
-  /* Ensure 2025 placeholder fits in the grid */
-  .future {
+  .year-btn {
+    padding: 10px 20px;
+    background: #ff5e57;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .year-btn:hover {
+    background: #ff3b3b;
+  }
+  
+  .image-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    margin-top: 20px;
   }
   
-  .future .empty-box {
-    width: 150px;
-    height: 150px;
-    border: 2px dashed white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 50px;
-    font-weight: bold;
-    color: white;
-    background-color: rgba(255, 255, 255, 0.2);
+  #year-image {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
     border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    display: none; /* Hidden by default */
   }
   
-  .caption {
-    font-size: 1rem;
-    text-align: center;
-    color: #fff;
+  #year-text {
+    font-size: 1.2rem;
+    color: white;
+    margin-top: 10px;
+    display: none;
   }
   
