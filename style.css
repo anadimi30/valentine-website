@@ -13,15 +13,15 @@
     }
   }
   
-  .hearts-container {
+.hearts-container {
     position: fixed;
     width: 100%;
     height: 100vh;
     overflow: hidden;
     z-index: -1;
-  }
+}
   
-  .heart {
+.heart {
     position: absolute;
     bottom: -10px;
     width: 20px;
@@ -29,18 +29,18 @@
     background-color: rgba(255, 0, 102, 0.6);
     clip-path: path("M10 0 L20 10 Q10 30 0 10 L10 0 Z");
     animation: float-hearts linear infinite;
-  }
+}
   
-  .heart:nth-child(1) { left: 5%; animation-duration: 8s; animation-delay: 1s; }
-  .heart:nth-child(2) { left: 15%; animation-duration: 10s; animation-delay: 2s; }
-  .heart:nth-child(3) { left: 30%; animation-duration: 7s; animation-delay: 3s; }
-  .heart:nth-child(4) { left: 50%; animation-duration: 9s; animation-delay: 4s; }
-  .heart:nth-child(5) { left: 70%; animation-duration: 6s; animation-delay: 2s; }
-  .heart:nth-child(6) { left: 85%; animation-duration: 8s; animation-delay: 1s; }
-  .heart:nth-child(7) { left: 95%; animation-duration: 11s; animation-delay: 3s; }
-  
-  /* ✨ Bring back the warm Valentine's theme */
-  body {
+.heart:nth-child(1) { left: 5%; animation-duration: 8s; animation-delay: 1s; }
+.heart:nth-child(2) { left: 15%; animation-duration: 10s; animation-delay: 2s; }
+.heart:nth-child(3) { left: 30%; animation-duration: 7s; animation-delay: 3s; }
+.heart:nth-child(4) { left: 50%; animation-duration: 9s; animation-delay: 4s; }
+.heart:nth-child(5) { left: 70%; animation-duration: 6s; animation-delay: 2s; }
+.heart:nth-child(6) { left: 85%; animation-duration: 8s; animation-delay: 1s; }
+.heart:nth-child(7) { left: 95%; animation-duration: 11s; animation-delay: 3s; }
+
+/* ✨ Valentine's Theme */
+body {
     font-family: 'Arial', sans-serif;
     background: linear-gradient(to bottom right, #ffafbd, #ffc3a0);
     display: flex;
@@ -51,55 +51,44 @@
     margin: 0;
     text-align: center;
     color: white;
-  }
-  
-  /* 📝 Improve spacing & typography */
-  .container {
+}
+
+/* 📝 Improve spacing & typography */
+.container {
     padding: 30px;
-  }
-  
-  h1 {
+}
+
+h1 {
     font-size: 2.5rem;
     margin-bottom: 20px;
-  }
-  
-  .timeline-title {
+}
+
+.timeline-title {
     font-size: 1.8rem;
     margin-top: 50px;
     font-weight: bold;
-  }
-  
-  button {
-    font-size: 1.3rem;
-    padding: 12px 18px;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    margin: 10px;
-  }
-  
-  #response {
-    font-size: 1.2rem;
-    margin-top: 20px;
-  }
-  
-  /* 🕐 Improve spacing for timeline */
-  .timeline {
+}
+
+/* Fix shifting issue */
+.image-container {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    gap: 25px;
-    margin-top: 30px;
-  }
-  
-  /* Make images fade in smoothly */
-  #year-image, #year-text {
+    justify-content: center;
+    min-height: 300px; /* Ensures space is reserved */
+    max-height: 300px;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+/* Smooth hover effect */
+#year-image, #year-text {
     opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-  }
-  
-  #year-image.show, #year-text.show {
+    transition: opacity 0.5s ease-in-out, transform 0.3s ease-in-out;
+    transform: scale(0.95);
+}
+
+#year-image.show, #year-text.show {
     opacity: 1;
-  }
-  
+    transform: scale(1);
+}
