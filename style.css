@@ -1,0 +1,61 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom right, #ffafbd, #ffc3a0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #fff;
+  }
+  
+  .container {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+  
+  button {
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  #yes-btn {
+    background: #ff5e57;
+    color: white;
+  }
+  
+  #yes-btn:hover {
+    background: #ff3b3b;
+  }
+  
+  #no-btn {
+    background: #4b6584;
+    color: white;
+  }
+  
+  #no-btn:hover {
+    background: #3b3b98;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  #response {
+    margin-top: 20px;
+    font-size: 1.5rem;
+  }
+  
