@@ -1,61 +1,44 @@
-body {
-    font-family: 'Arial', sans-serif;
-    background: linear-gradient(to bottom right, #ffafbd, #ffc3a0);
+.timeline {
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .year {
+    display: inline-block;
+    margin: 10px;
+    text-align: center;
+  }
+  
+  .year img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .future .empty-box {
+    width: 150px;
+    height: 150px;
+    border: 2px dashed white;
     display: flex;
-    justify-content: center;
     align-items: center;
-    height: 100vh;
-    margin: 0;
+    justify-content: center;
+    font-size: 50px;
+    font-weight: bold;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+  }
+  
+  .caption {
+    font-size: 1rem;
+    margin-top: 5px;
     color: #fff;
   }
   
-  .container {
-    text-align: center;
-    background: rgba(0, 0, 0, 0.6);
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  }
-  
-  h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-  }
-  
-  button {
-    font-size: 1.2rem;
-    padding: 10px 20px;
-    margin: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
-  
-  #yes-btn {
-    background: #ff5e57;
-    color: white;
-  }
-  
-  #yes-btn:hover {
-    background: #ff3b3b;
-  }
-  
-  #no-btn {
-    background: #4b6584;
-    color: white;
-  }
-  
-  #no-btn:hover {
-    background: #3b3b98;
-  }
-  
-  .hidden {
-    display: none;
-  }
-  
-  #response {
-    margin-top: 20px;
-    font-size: 1.5rem;
+  .arrow {
+    font-size: 2rem;
+    margin-top: -10px;
   }
   
