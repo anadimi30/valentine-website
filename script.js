@@ -27,4 +27,9 @@ yearButtons.forEach((button) => {
       yearText.style.display = "block";
     }
   });
+
+  button.addEventListener("mouseout", () => {
+    yearImage.style.display = "none";
+    yearText.style.display = "none";
+  });
 });
